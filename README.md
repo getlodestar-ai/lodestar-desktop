@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://getlodestar.ai">
-    <img src="./assets/lodestar-mark.svg" width="96" height="96" alt="Lodestar logo">
+    <img src="./assets/lodestar-logo.png" width="128" height="128" alt="Lodestar logo">
   </a>
 </p>
 
