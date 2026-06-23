@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Lodestar Desktop Releases</title>
+    <meta name="description" content="Official public installer and auto-update feed for the Lodestar desktop app.">
+    <style>
+      :root {
+        color-scheme: dark;
+        --bg: #090b10;
+        --panel: #121722;
+        --text: #f5f7fb;
+        --muted: #a9b4c7;
+        --brand: #d8795f;
+        --brand-strong: #f39a79;
+        --line: rgba(255, 255, 255, 0.12);
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        min-height: 100vh;
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        background:
+          radial-gradient(circle at top left, rgba(216, 121, 95, 0.18), transparent 36rem),
+          linear-gradient(135deg, #090b10 0%, #111827 100%);
+        color: var(--text);
+      }
+      main {
+        width: min(960px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: 72px 0;
+      }
+      .hero {
+        border: 1px solid var(--line);
+        border-radius: 28px;
+        padding: 48px;
+        background: rgba(18, 23, 34, 0.82);
+        box-shadow: 0 24px 80px rgba(0, 0, 0, 0.28);
+      }
+      .badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 8px 12px;
+        border-radius: 999px;
+        background: rgba(216, 121, 95, 0.14);
+        color: var(--brand-strong);
+        font-size: 14px;
+        font-weight: 700;
+      }
+      h1 {
+        max-width: 760px;
+        margin: 24px 0 16px;
+        font-size: clamp(42px, 7vw, 76px);
+        line-height: 0.94;
+        letter-spacing: -0.06em;
+      }
+      p {
+        max-width: 700px;
+        color: var(--muted);
+        font-size: 19px;
+        line-height: 1.65;
+      }
+      .actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px;
+        margin-top: 32px;
+      }
+      a {
+        color: inherit;
+      }
+      .button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 48px;
+        padding: 0 20px;
+        border-radius: 14px;
+        border: 1px solid var(--line);
+        text-decoration: none;
+        font-weight: 800;
+      }
+      .primary {
+        border-color: transparent;
+        background: var(--brand);
+        color: #180b08;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 16px;
+        margin-top: 18px;
+      }
+      .card {
+        padding: 22px;
+        border: 1px solid var(--line);
+        border-radius: 20px;
+        background: rgba(255, 255, 255, 0.04);
+      }
+      .card strong {
+        display: block;
+        margin-bottom: 8px;
+      }
+      .card span {
+        color: var(--muted);
+        line-height: 1.55;
+      }
+      footer {
+        margin-top: 28px;
+        color: var(--muted);
+        font-size: 14px;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section class="hero">
+        <span class="badge">Official Lodestar Desktop</span>
+        <h1>Installers and updates for Lodestar.</h1>
+        <p>
+          This public repository hosts signed desktop installers and auto-update metadata for the production Lodestar desktop app.
+        </p>
+        <div class="actions">
+          <a class="button primary" href="https://github.com/getlodestar-ai/lodestar-desktop/releases/latest">Download Latest Release</a>
+          <a class="button" href="https://github.com/getlodestar-ai/lodestar-desktop">View Repository</a>
+        </div>
+      </section>
+      <section class="grid" aria-label="Release details">
+        <div class="card">
+          <strong>Public distribution</strong>
+          <span>Installer assets are intentionally public so the app can download updates without exposing the source repository.</span>
+        </div>
+        <div class="card">
+          <strong>Auto-update feed</strong>
+          <span>Electron update metadata is published alongside every desktop release.</span>
+        </div>
+        <div class="card">
+          <strong>Production channel</strong>
+          <span>This page is for stable Lodestar releases. Development builds live in the Dev release repository.</span>
+        </div>
+      </section>
+      <footer>
+        Source code is maintained separately from this public release feed.
+      </footer>
+    </main>
+  </body>
+</html>
